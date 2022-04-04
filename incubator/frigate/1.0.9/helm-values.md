@@ -16,12 +16,12 @@ You will, however, be able to use all values referenced in the common chart here
 | frigate.cameras[0].best_image_timeout | int | `60` |  to be replaced by a newer image. (default: shown below) |
 | frigate.cameras[0].detect.height | int | `720` |  |
 | frigate.cameras[0].detect.width | int | `1280` |  |
-| frigate.cameras[0].inputs[0] | object | `{"path":"rtsp://username:password@highres.url","roles":["record"]}` |  NOTE: path may include environment variables, which must begin with 'FRIGATE_' and be referenced in {} |
+| frigate.cameras[0].inputs[0] | object | `{"path":"rtsp://admin:ratapaloma@192.168.1.53/live","roles":["record"]}` |  NOTE: path may include environment variables, which must begin with 'FRIGATE_' and be referenced in {} |
 | frigate.cameras[0].inputs[0].roles | list | `["record"]` |  NOTICE: In addition to assigning the record, and rtmp roles, they must also be enabled in the camera config. |
-| frigate.cameras[0].inputs[1].path | string | `"rtsp://username:password@lowres.url"` |  |
+| frigate.cameras[0].inputs[1].path | string | `"rtsp://admin:ratapaloma@192.168.1.53/live"` |  |
 | frigate.cameras[0].inputs[1].roles[0] | string | `"detect"` |  |
 | frigate.cameras[0].inputs[1].roles[1] | string | `"rtmp"` |  |
-| frigate.cameras[0].name | string | `"camera1"` |  |
+| frigate.cameras[0].name | string | `"cam_patio"` |  |
 | frigate.cameras[0].objects.track[0] | string | `"person"` |  |
 | frigate.cameras[0].objects.track[1] | string | `"car"` |  |
 | frigate.cameras[0].objects.track[2] | string | `"motorcyle"` |  |
@@ -30,13 +30,13 @@ You will, however, be able to use all values referenced in the common chart here
 | frigate.cameras[0].record.enabled | bool | `true` |  |
 | frigate.cameras[0].snapshots.enabled | bool | `true` |  |
 | frigate.mqtt.authentitcated | bool | `false` |  |
-| frigate.mqtt.host | string | `"mosquitto.ix-mosquitto.svc.cluster.local"` |  |
-| frigate.mqtt.password | string | `"password"` |  |
+| frigate.mqtt.host | string | `"192.168.1.7"` |  |
+| frigate.mqtt.password | string | `"querty321"` |  |
 | frigate.mqtt.port | int | `1883` |  |
-| frigate.mqtt.username | string | `"mqtt_user"` |  |
+| frigate.mqtt.username | string | `"frigate"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"blakeblackshear/frigate"` |  |
-| image.tag | string | `"0.10.0-beta6-amd64nvidia"` |  |
+| image.tag | string | `"stable-amd64nvidia"` |  |
 | ingress.rtmp.autoLink | bool | `true` |  |
 | persistence.cache.enabled | bool | `true` |  |
 | persistence.cache.mountPath | string | `"/tmp/cache"` |  |
@@ -54,7 +54,7 @@ You will, however, be able to use all values referenced in the common chart here
 | securityContext.runAsNonRoot | bool | `false` |  |
 | service.main.ports.main.port | int | `5000` |  |
 | service.main.ports.main.targetPort | int | `5000` |  |
-| service.rtmp.enabled | bool | `true` |  |
+| service.rtmp.enabled | bool | `false` |  |
 | service.rtmp.ports.rtmp.enabled | bool | `true` |  |
 | service.rtmp.ports.rtmp.port | int | `1935` |  |
 | service.rtmp.ports.rtmp.protocol | string | `"TCP"` |  |
