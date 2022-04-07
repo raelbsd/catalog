@@ -19,7 +19,7 @@ service:
         targetPort: 5000
         port: 5000
   rtmp:
-    enabled: true
+    enabled: false
     ports:
       rtmp:
         protocol: TCP
@@ -85,3 +85,6 @@ persistence:
     mountPath: "/media"
   coral:
     enabled: true
+env:
+  NVIDIA_VISIBLE_DEVICES: "all"
+  NVIDIA_DRIVER_CAPABILITIES: "compute,utility,video"
