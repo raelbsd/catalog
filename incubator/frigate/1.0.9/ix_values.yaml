@@ -83,3 +83,5 @@ persistence:
   media:
     enabled: true
     mountPath: "/media"
+  coral:
+    enabled: true
