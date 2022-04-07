@@ -3,6 +3,8 @@ image:
   pullPolicy: IfNotPresent
   tag: stable-amd64nvidia
 
+runtime: nvidia
+
 securityContext:
   readOnlyRootFilesystem: false
   runAsNonRoot: false
@@ -19,7 +21,7 @@ service:
         targetPort: 5000
         port: 5000
   rtmp:
-    enabled: false
+    enabled: true
     ports:
       rtmp:
         protocol: TCP

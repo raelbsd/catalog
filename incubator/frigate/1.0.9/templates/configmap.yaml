@@ -114,6 +114,7 @@ data:
     ffmpeg:
       # Optional: global ffmpeg args (default: shown below) warning instead of debug
       global_args: -hide_banner -loglevel debug
+      input_args: -c:v h264_cuvid
       # Optional: global hwaccel args (default: shown below)
       # NOTE: See hardware acceleration docs for your specific device
       # hwaccel_args: []
@@ -285,7 +286,7 @@ data:
     # NOTE: Can be overridden at the camera level
     rtmp:
       # Optional: Enable the RTMP stream (default: True)
-      enabled: True
+      enabled: False
 
     # Required
     cameras:
