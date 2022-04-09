@@ -86,7 +86,7 @@ persistence:
     enabled: true
 env:
   NVIDIA_VISIBLE_DEVICES: "all"
-  NVIDIA_DRIVER_CAPABILITIES: "compute,utility,video"
+  NVIDIA_DRIVER_CAPABILITIES: "all"
 
 gpu:
   nvidia:
