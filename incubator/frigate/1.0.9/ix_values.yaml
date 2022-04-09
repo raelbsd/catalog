@@ -87,3 +87,8 @@ persistence:
 env:
   NVIDIA_VISIBLE_DEVICES: "all"
   NVIDIA_DRIVER_CAPABILITIES: "compute,utility,video"
+
+gpu:
+  nvidia:
+    # -- Enables NVIDIA GPU compatibility. Must also use the "amd64nvidia" tagged image
+    enabled: true
