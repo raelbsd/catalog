@@ -61,10 +61,7 @@ frigate:
           # they must also be enabled in the camera config.
           roles:
             - record
-        - path: rtsp://admin:ratapaloma@192.168.1.53/live
-          roles:
             - detect
-            - rtmp
       record:
         enabled: True
       # Optional: timeout for highest scoring image before allowing it
