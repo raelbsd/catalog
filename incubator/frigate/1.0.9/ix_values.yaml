@@ -1,9 +1,7 @@
 image:
   repository: blakeblackshear/frigate
   pullPolicy: IfNotPresent
-  tag: stable-amd64nvidia
-
-runtime: nvidia
+  tag: stable-amd64
 
 securityContext:
   readOnlyRootFilesystem: false
@@ -83,12 +81,4 @@ persistence:
     enabled: true
     mountPath: "/media"
   coral:
-    enabled: true
-env:
-  NVIDIA_VISIBLE_DEVICES: "all"
-  NVIDIA_DRIVER_CAPABILITIES: "all"
-
-gpu:
-  nvidia:
-    # -- Enables NVIDIA GPU compatibility. Must also use the "amd64nvidia" tagged image
     enabled: true
