@@ -68,6 +68,9 @@ frigate:
       snapshots:
         enabled: True
 persistence:
+  config:
+    enabled: true
+    mountpath: "/mnt/truenas_1/containers/frigate"
   cache:
     enabled: true
     mountPath: "/tmp/cache"
