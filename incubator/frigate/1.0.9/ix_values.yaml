@@ -70,7 +70,7 @@ frigate:
 persistence:
   config:
     enabled: true
-    mountPath: "/mnt/truenas_1/containers/frigate"
+    mountPath: "/config"
   cache:
     enabled: true
     mountPath: "/tmp/cache"
